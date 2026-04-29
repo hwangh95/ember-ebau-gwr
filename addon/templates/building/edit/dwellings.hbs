@@ -6,7 +6,7 @@
       @models={{this.fetchDwellings.lastSuccessful.value}}
       @modelName="dwelling"
       @newRoute="building.edit.dwelling.new"
-      @removeLink={{this.removeDwelling}}
+      @removeLink={{this.confirmRemoveDwelling}}
     >
       <:list as |model|>
         <td class="uk-table-shrink">
@@ -52,3 +52,40 @@
     </LinkedModels>
   {{/if}}
 </div>
+<UkModal
+  @visible={{this.dwellingToRemove}}
+  @container={{this.config.modalContainer}}
+  as |Modal|
+>
+  <ValidatedForm
+    @model={{changeset @model this.RemoveDwellingValidations}}
+    @on-submit={{this.removeDwelling}}
+    as |Form|
+  >
+    <Modal.header>
+      <h2 class="uk-modal-title">
+        Removing Dwelling
+      </h2>
+    </Modal.header>
+    <Modal.body class="uk-overflow-auto">
+      <Form.input
+        @type="textarea"
+        @label="Removal Reason"
+        @name="removeReason"
+        @rows="10"
+        @required={{true}}
+        @hint="Enter the reason for removing the dwelling"
+        @errorComponent={{component "validated-form-error"}}
+      />
+    </Modal.body>
+    <Modal.footer class="uk-text-right">
+      <Form.button
+        @label="Cancel"
+        class="uk-modal-close"
+      />
+      <Form.submit
+        @label="Save"
+      />
+    </Modal.footer>
+  </ValidatedForm>
+</UkModal>

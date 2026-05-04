@@ -52,40 +52,12 @@
     </LinkedModels>
   {{/if}}
 </div>
-<UkModal
+
+<RemoveModal
   @visible={{this.dwellingToRemove}}
-  @container={{this.config.modalContainer}}
-  as |Modal|
->
-  <ValidatedForm
-    @model={{changeset @model this.RemoveDwellingValidations}}
-    @on-submit={{this.removeDwelling}}
-    as |Form|
-  >
-    <Modal.header>
-      <h2 class="uk-modal-title">
-        Removing Dwelling
-      </h2>
-    </Modal.header>
-    <Modal.body class="uk-overflow-auto">
-      <Form.input
-        @type="textarea"
-        @label="Removal Reason"
-        @name="removeReason"
-        @rows="10"
-        @required={{true}}
-        @hint="Enter the reason for removing the dwelling"
-        @errorComponent={{component "validated-form-error"}}
-      />
-    </Modal.body>
-    <Modal.footer class="uk-text-right">
-      <Form.button
-        @label="Cancel"
-        class="uk-modal-close"
-      />
-      <Form.submit
-        @label="Save"
-      />
-    </Modal.footer>
-  </ValidatedForm>
-</UkModal>
+  @model={{@model}}
+  @on-submit={{this.removeDwelling}}
+  @title={{t "ember-gwr.building.dwellings.removeModalTitle" }}
+  @label={{t "ember-gwr.building.dwellings.removeModalLabel" }}
+  @hint={{t "ember-gwr.building.dwellings.removeModalHint" }}
+/>

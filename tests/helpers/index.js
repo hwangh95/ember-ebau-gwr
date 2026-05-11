@@ -8,7 +8,7 @@ import {
 } from "ember-qunit";
 import UIkit from "uikit";
 
-import mirageConfig from "../mirage/config";
+import mirageConfig from "dummy/mirage/config";
 
 // This file exists to provide wrappers around ember-qunit's
 // test setup functions. This way, you can easily extend the setup that is

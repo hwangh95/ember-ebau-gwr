@@ -71,6 +71,12 @@ export default class SearchStreetComponent extends ValidatedInput {
   });
 
   @action
+  setDirtyandUpdate(onUpdate, args) {
+    this.dirty = true;
+    return onUpdate(args);
+  }
+
+  @action
   handleFocus(select, e) {
     if (this.focusComesFromOutside(e)) {
       select.actions.open();

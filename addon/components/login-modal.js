@@ -1,3 +1,4 @@
+import { A } from "@ember/array";
 import { action } from "@ember/object";
 import { inject as service } from "@ember/service";
 import Component from "@glimmer/component";
@@ -15,6 +16,11 @@ export default class LoginModalComponent extends Component {
   get municipalities() {
     return municipalities[this.config.cantonAbbreviation];
   }
+
+  getMunicipalityName = (id) => {
+    const municipalityItem = A(this.municipalities).findBy("id", parseInt(id));
+    return municipalityItem?.name;
+  };
 
   @action
   async login() {

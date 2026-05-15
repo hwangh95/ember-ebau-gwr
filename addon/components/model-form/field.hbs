@@ -34,7 +34,7 @@
       promptIsSelectable=true
       on-update=(if
         @on-update
-        (queue this.updateModelField @on-update)
+        (fn this.updateModelFieldAndUpdate @on-update)
         this.updateModelField
       )
       renderComponent=(component

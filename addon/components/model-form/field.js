@@ -102,6 +102,12 @@ export default class ModelFormFieldComponent extends Component {
   }
 
   @action
+  updateModelFieldAndUpdate(onUpdate, eventOrValue) {
+    this.updateModelField(eventOrValue);
+    return onUpdate(eventOrValue);
+  }
+
+  @action
   updateModelField(eventOrValue) {
     const attr = this.args.attr;
     const value = eventOrValue?.target?.value ?? eventOrValue;

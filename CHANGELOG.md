@@ -1,3 +1,11 @@
+## [8.1.1](https://github.com/inosca/ember-ebau-gwr/compare/v8.1.0...v8.1.1) (2026-05-27)
+
+
+### Bug Fixes
+
+* **search-street:** fix invalid validation path on new buildings ([40cd7d3](https://github.com/inosca/ember-ebau-gwr/commit/40cd7d3b99c2b3a453fab1bcead1bd6b415e2c96))
+* **search-street:** fix validation error on correct input ([4471c34](https://github.com/inosca/ember-ebau-gwr/commit/4471c34496cfe1de400264f500e8a589b02f38c6))
+
 # [8.1.0](https://github.com/inosca/ember-ebau-gwr/compare/v8.0.3...v8.1.0) (2026-01-12)
 
 

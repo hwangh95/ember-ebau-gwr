@@ -1,3 +1,11 @@
+## [8.1.2](https://github.com/inosca/ember-ebau-gwr/compare/v8.1.1...v8.1.2) (2026-06-04)
+
+
+### Bug Fixes
+
+* **forms:** extend existing defaults in ember-validated-form ([8695d8b](https://github.com/inosca/ember-ebau-gwr/commit/8695d8b076600c2685e6e3f2f989b3602720d2f2))
+* **project:** use proper args for update function ([8539863](https://github.com/inosca/ember-ebau-gwr/commit/8539863c2bf3210989408448b978da100f7104c4))
+
 ## [8.1.1](https://github.com/inosca/ember-ebau-gwr/compare/v8.1.0...v8.1.1) (2026-05-27)
 
 

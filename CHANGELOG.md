@@ -1,3 +1,10 @@
+## [8.1.3](https://github.com/inosca/ember-ebau-gwr/compare/v8.1.2...v8.1.3) (2026-06-09)
+
+
+### Bug Fixes
+
+* **project:** replace unused parameter with value from [@attr](https://github.com/attr) ([dac9956](https://github.com/inosca/ember-ebau-gwr/commit/dac99563dd8e0f9c4e796dd2973fd3a338231d2c))
+
 ## [8.1.2](https://github.com/inosca/ember-ebau-gwr/compare/v8.1.1...v8.1.2) (2026-06-04)
 
 
